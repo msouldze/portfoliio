@@ -1,0 +1,41 @@
+@media(min-width: 320px) {
+  .experience {
+    padding: 100px 0;
+    text-align: center;
+    font-size: 1.1rem;
+    background: #392DC3;
+    color: #EEEDED;
+  }
+
+  .experience-list {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .experience-list li + li {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: solid 1px #EEEDED;
+  }
+
+  .experience-item h4 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-transform: lowercase;
+  }
+
+}
+
+@media(min-width: 768px) {
+  .experience-list {
+    width: 50%;
+    /* margin-top: 100px; */
+  }
+}
+
+@media(min-width: 992px) {
+  .experience-list {
+    margin-top: 200px;
+  }
+}
