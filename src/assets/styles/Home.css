@@ -5,6 +5,7 @@
     background-repeat: no-repeat;
     background-position: top;
     background-size: contain;
+    margin-top: 90px;
   }
 
   .home-content {
@@ -17,21 +18,31 @@
     background-color: rgba(255, 255, 255, 0.7);
   }
 
-  .welcome {
+  .welcome-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: 35px;
     font-size: 26px;
     text-align: left;
+    transition: all 2s ease-in-out;
   }
 
-  .welcome div:first-child {
+  .welcome-container div:first-child {
     font-size: 2rem;
+    transform: translateX(100%);
+    opacity: 0;
   }
 
-  .welcome div:last-child {
+  .welcome-container div:last-child {
     font-size: 1.5rem;
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  .welcome-container.animation div {
+    transform: translateX(0);
+    opacity: 1;
   }
 
   .avatar {
@@ -40,7 +51,6 @@
 
   .home-background {
     display: none;
-
   }
 }
 
@@ -60,15 +70,15 @@
     background: none;
   }
 
-  .welcome {
+  .welcome-container {
     text-align: center;
   }
 
-  .welcome div:first-child {
+  .welcome-container div:first-child {
     font-size: 2rem;
   }
 
-  .welcome div:last-child {
+  .welcome-container div:last-child {
     font-size: 1.5rem;
   }
 

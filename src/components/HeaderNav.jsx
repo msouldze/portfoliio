@@ -1,5 +1,3 @@
-import Link from "./Link";
-
 function HeaderNav({ children, type, handleMenu, setStatus = '' }) {
   const name = type === 'header-btn-open' ? 'header-navbar' : 'aside-header';
 

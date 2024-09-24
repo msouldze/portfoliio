@@ -1,11 +1,28 @@
+import { useInView } from "react-intersection-observer";
 import '../assets/styles/Home.css'
+import { useEffect } from "react";
 
 
 function Home() {
+  const [ref, inView, entry] = useInView({
+    threshold: 1,
+  });
+
+  useEffect(() => {
+    if(inView) {
+      if(entry.isIntersecting) {
+        entry.target.classList.add('animation');
+      } else {
+        entry.target.classList.remove('animation');
+      }
+      console.log(entry);
+    }
+  }, [inView]);
+
   return (
     <section className='home' id='home'>
       <div className='home-content'>
-        <div className='welcome'>
+        <div ref={ref} className='welcome-container'>
           <div>Welcome to my Profile Page</div>
           <div>I am Aizhan Dzhumanalieva</div>
         </div>
