@@ -15,7 +15,6 @@ function Home() {
       } else {
         entry.target.classList.remove('animation');
       }
-      console.log(entry);
     }
   }, [inView]);
 
